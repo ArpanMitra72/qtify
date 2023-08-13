@@ -1,0 +1,52 @@
+.fullCard {
+  width: 159px;
+  height: 232px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+.onlyCard {
+  width: 159px;
+  height: 205px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background: #fff;
+}
+
+.settingSmallBox {
+  padding-left: 5px;
+}
+
+.smallBox {
+  width: 71px;
+  height: 23px;
+  border-radius: 10px;
+  background: #121212;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.followersText {
+  color: #fff;
+  font-family: Poppins;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+}
+
+.titleText {
+  color: #fff;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}

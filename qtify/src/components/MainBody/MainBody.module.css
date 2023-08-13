@@ -1,0 +1,10 @@
+.fullBody {
+  width: 1440px;
+}
+.topBody {
+  display: flex;
+  margin-left: 28px;
+  margin-right: 28px;
+  width: 1384px;
+  height: 592px;
+}
