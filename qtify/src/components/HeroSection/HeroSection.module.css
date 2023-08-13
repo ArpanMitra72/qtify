@@ -1,0 +1,28 @@
+.container {
+  width: 100vw;
+  height: 270px;
+  flex-shrink: 0;
+  background-color: var(--color-black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.firstText {
+  color: var(--color-white);
+  text-align: center;
+  font-family: Poppins;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.secondText {
+  color: #fff;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
