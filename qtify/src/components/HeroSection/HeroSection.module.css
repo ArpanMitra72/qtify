@@ -6,6 +6,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  column-gap: 30px;
 }
 .firstText {
   color: var(--color-white);

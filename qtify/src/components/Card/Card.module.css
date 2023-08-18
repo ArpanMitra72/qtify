@@ -1,3 +1,10 @@
+.albumsContainer {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  column-gap: 40px;
+  row-gap: 32px;
+}
+
 .fullCard {
   width: 159px;
   height: 232px;
@@ -14,6 +21,11 @@
   flex-shrink: 0;
   border-radius: 10px;
   background: #fff;
+}
+
+.cardWithBorderRadius {
+  border-radius: 10px 10px 0 0;
+  overflow: hidden;
 }
 
 .settingSmallBox {
