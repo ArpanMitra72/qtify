@@ -7,25 +7,3 @@
   width: 1384px;
   height: 592px;
 }
-.topAlbumText {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.firstText {
-  color: #fff;
-  font-family: Poppins;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
-}
-.secondText {
-  color: var(--color-primary);
-  text-align: right;
-  font-family: Poppins;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
-}

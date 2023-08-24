@@ -4,6 +4,10 @@
   column-gap: 40px;
   row-gap: 32px;
 }
+.fullCardGrid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
 
 .fullCard {
   width: 159px;
@@ -61,4 +65,52 @@
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+}
+
+.topAlbumText {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.firstText {
+  color: #fff;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.secondText {
+  color: var(--color-primary);
+  text-align: right;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.customButtonPrev,
+.customButtonNext {
+  background-color: green;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  transition: margin 0.3s;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1;
 }
