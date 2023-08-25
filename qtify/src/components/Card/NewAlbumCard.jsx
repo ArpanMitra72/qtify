@@ -5,7 +5,7 @@ import "swiper/css";
 import "swiper/css/bundle";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
 import SwiperCore from "swiper/core";
-import styles from "./Card.module.css";
+import styles from "./NewAlbumCard.module.css";
 import cardImage from "../../assets/firstcardImage.png";
 
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
@@ -16,7 +16,7 @@ const Card = () => {
 
   useEffect(() => {
     axios
-      .get("https://qtify-backend-labs.crio.do/albums/top")
+      .get("https://qtify-backend-labs.crio.do/albums/new")
       .then((response) => {
         const albums = response.data;
         setAlbumDataList(albums);
@@ -32,9 +32,9 @@ const Card = () => {
   };
 
   return (
-    <div className={styles.topAlbumContainer}>
+    <div>
       <div className={styles.topAlbumText}>
-        <p className={styles.firstText}>Top Albums</p>
+        <p className={styles.firstText}>New Albums</p>
         <p className={styles.secondText} onClick={toggleShowAll}>
           Show all
         </p>

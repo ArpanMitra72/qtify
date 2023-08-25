@@ -1,6 +1,3 @@
-.topAlbumContainer {
-  margin-bottom: 32px;
-}
 .albumsContainer {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
