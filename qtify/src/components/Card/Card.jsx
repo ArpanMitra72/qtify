@@ -32,124 +32,132 @@ const Card = () => {
   };
 
   return (
-    <div className={styles.topAlbumContainer}>
-      <div className={styles.topAlbumText}>
-        <p className={styles.firstText}>Top Albums</p>
-        <p className={styles.secondText} onClick={toggleShowAll}>
-          Show all
-        </p>
-      </div>
-      <div className={styles.cardGrid}>
-        {showAll ? (
-          <div className={styles.fullCardGrid}>
-            {albumDataList.map((albumData) => (
-              <div
-                className={`${styles.fullCard} ${styles.cardWithBorderRadius}`}
-                key={albumData.id}
-              >
+    <div className={styles.mainContainer}>
+      <div className={styles.topAlbumContainer}>
+        <div className={styles.topAlbumText}>
+          <p className={styles.firstText}>Top Albums</p>
+          <p className={styles.secondText} onClick={toggleShowAll}>
+            Show all
+          </p>
+        </div>
+        <div className={styles.cardGrid}>
+          {showAll ? (
+            <div className={styles.fullCardGrid}>
+              {albumDataList.map((albumData) => (
                 <div
                   className={`${styles.fullCard} ${styles.cardWithBorderRadius}`}
                   key={albumData.id}
                 >
-                  <div className={styles.onlyCard}>
-                    <img
-                      src={albumData.image}
-                      alt="Card Image"
-                      width={159}
-                      height={170}
-                    />
-                    <div className={styles.settingSmallBox}>
-                      <div className={styles.smallBox}>
-                        <div className={styles.followersText}>
-                          {albumData.follows} Follows
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className={styles.titleText}>{albumData.title}</div>
-                </div>
-              </div>
-            ))}
-          </div>
-        ) : (
-          <div>
-            <Swiper
-              spaceBetween={40}
-              navigation={{
-                prevEl: ".customButtonPrev",
-                nextEl: ".customButtonNext",
-              }}
-              slidesPerView={7}
-              loop={true}
-              breakpoints={{
-                768: {
-                  slidesPerView: 7,
-                },
-              }}
-            >
-              {albumDataList.map((albumData) => (
-                <div className={styles.setNavigation}>
-                  <SwiperSlide key={albumData.id}>
-                    <div
-                      className={`${styles.fullCard} ${styles.cardWithBorderRadius}`}
-                      key={albumData.id}
-                    >
-                      <div className={styles.onlyCard}>
-                        <img
-                          src={albumData.image}
-                          alt="Card Image"
-                          width={159}
-                          height={170}
-                        />
-                        <div className={styles.settingSmallBox}>
-                          <div className={styles.smallBox}>
-                            <div className={styles.followersText}>
-                              {albumData.follows} Follows
-                            </div>
+                  <div
+                    className={`${styles.fullCard} ${styles.cardWithBorderRadius}`}
+                    key={albumData.id}
+                  >
+                    <div className={styles.onlyCard}>
+                      <img
+                        src={albumData.image}
+                        alt="Card Image"
+                        width={159}
+                        height={170}
+                      />
+                      <div className={styles.settingSmallBox}>
+                        <div className={styles.smallBox}>
+                          <div className={styles.followersText}>
+                            {albumData.follows} Follows
                           </div>
                         </div>
                       </div>
-                      <div className={styles.titleText}>{albumData.title}</div>
                     </div>
-                  </SwiperSlide>
+                    <div className={styles.titleText}>{albumData.title}</div>
+                  </div>
                 </div>
               ))}
-              <div className={styles.arrow}>
-                <div className={`${styles.customButtonPrev} customButtonPrev`}>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="white"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
+            </div>
+          ) : (
+            <div>
+              <Swiper
+                spaceBetween={40}
+                navigation={{
+                  prevEl: ".customButtonPrev",
+                  nextEl: ".customButtonNext",
+                }}
+                slidesPerView={7}
+                loop={true}
+                breakpoints={{
+                  768: {
+                    slidesPerView: 7,
+                  },
+                }}
+              >
+                {albumDataList.map((albumData) => (
+                  <div className={styles.setNavigation}>
+                    <SwiperSlide key={albumData.id}>
+                      <div
+                        className={`${styles.fullCard} ${styles.cardWithBorderRadius}`}
+                        key={albumData.id}
+                      >
+                        <div className={styles.onlyCard}>
+                          <img
+                            src={albumData.image}
+                            alt="Card Image"
+                            width={159}
+                            height={170}
+                          />
+                          <div className={styles.settingSmallBox}>
+                            <div className={styles.smallBox}>
+                              <div className={styles.followersText}>
+                                {albumData.follows} Follows
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div className={styles.titleText}>
+                          {albumData.title}
+                        </div>
+                      </div>
+                    </SwiperSlide>
+                  </div>
+                ))}
+                <div className={styles.arrow}>
+                  <div
+                    className={`${styles.customButtonPrev} customButtonPrev`}
                   >
-                    <path d="M15 18l-6-6 6-6" />
-                  </svg>
-                </div>
-                {/* Custom next button */}
-                <div className={`${styles.customButtonNext} customButtonNext`}>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="white"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="white"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <path d="M15 18l-6-6 6-6" />
+                    </svg>
+                  </div>
+                  {/* Custom next button */}
+                  <div
+                    className={`${styles.customButtonNext} customButtonNext`}
                   >
-                    <path d="M9 18l6-6-6-6" />
-                  </svg>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="white"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <path d="M9 18l6-6-6-6" />
+                    </svg>
+                  </div>
                 </div>
-              </div>
-            </Swiper>
-          </div>
-        )}
+              </Swiper>
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );

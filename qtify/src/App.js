@@ -1,14 +1,19 @@
 import HeroSection from "./components/HeroSection/HeroSection";
-import MainBody from "./components/MainBody/MainBody";
+import Card from "./components/Card/Card";
+import NewAlbumCard from "./components/Card/NewAlbumCard";
 import NavBar from "./components/NavBar/NavBar";
+import Songs from "./components/Songs/Songs";
+import styles from "./App.css";
 
 function App() {
   return (
-    <>
+    <div className={styles.MainBox}>
       <NavBar />
       <HeroSection />
-      <MainBody />
-    </>
+      <Card />
+      <NewAlbumCard />
+      <Songs />
+    </div>
   );
 }
 

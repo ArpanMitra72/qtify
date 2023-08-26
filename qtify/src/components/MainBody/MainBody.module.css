@@ -1,5 +1,6 @@
 .fullBody {
   width: 1440px;
+  border-bottom: 1px solid #34c94b;
 }
 .topBody {
   margin-left: 28px;
