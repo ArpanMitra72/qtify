@@ -6,6 +6,7 @@ import "swiper/css/bundle";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
 import SwiperCore from "swiper/core";
 import styles from "./Card.module.css";
+import Tooltip from "../Tooltip/Tooltip";
 import cardImage from "../../assets/firstcardImage.png";
 
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
@@ -44,32 +45,34 @@ const Card = () => {
           {showAll ? (
             <div className={styles.fullCardGrid}>
               {albumDataList.map((albumData) => (
-                <div
-                  className={`${styles.fullCard} ${styles.cardWithBorderRadius}`}
-                  key={albumData.id}
-                >
+                <Tooltip songCount={albumData.songs.length} key={albumData.id}>
                   <div
                     className={`${styles.fullCard} ${styles.cardWithBorderRadius}`}
                     key={albumData.id}
                   >
-                    <div className={styles.onlyCard}>
-                      <img
-                        src={albumData.image}
-                        alt="Card Image"
-                        width={159}
-                        height={170}
-                      />
-                      <div className={styles.settingSmallBox}>
-                        <div className={styles.smallBox}>
-                          <div className={styles.followersText}>
-                            {albumData.follows} Follows
+                    <div
+                      className={`${styles.fullCard} ${styles.cardWithBorderRadius}`}
+                      key={albumData.id}
+                    >
+                      <div className={styles.onlyCard}>
+                        <img
+                          src={albumData.image}
+                          alt="Card Image"
+                          width={159}
+                          height={170}
+                        />
+                        <div className={styles.settingSmallBox}>
+                          <div className={styles.smallBox}>
+                            <div className={styles.followersText}>
+                              {albumData.follows} Follows
+                            </div>
                           </div>
                         </div>
                       </div>
+                      <div className={styles.titleText}>{albumData.title}</div>
                     </div>
-                    <div className={styles.titleText}>{albumData.title}</div>
                   </div>
-                </div>
+                </Tooltip>
               ))}
             </div>
           ) : (
@@ -91,29 +94,31 @@ const Card = () => {
                 {albumDataList.map((albumData) => (
                   <div className={styles.setNavigation}>
                     <SwiperSlide key={albumData.id}>
-                      <div
-                        className={`${styles.fullCard} ${styles.cardWithBorderRadius}`}
-                        key={albumData.id}
-                      >
-                        <div className={styles.onlyCard}>
-                          <img
-                            src={albumData.image}
-                            alt="Card Image"
-                            width={159}
-                            height={170}
-                          />
-                          <div className={styles.settingSmallBox}>
-                            <div className={styles.smallBox}>
-                              <div className={styles.followersText}>
-                                {albumData.follows} Follows
+                      <Tooltip songCount={albumData.songs.length}>
+                        <div
+                          className={`${styles.fullCard} ${styles.cardWithBorderRadius}`}
+                          key={albumData.id}
+                        >
+                          <div className={styles.onlyCard}>
+                            <img
+                              src={albumData.image}
+                              alt="Card Image"
+                              width={159}
+                              height={170}
+                            />
+                            <div className={styles.settingSmallBox}>
+                              <div className={styles.smallBox}>
+                                <div className={styles.followersText}>
+                                  {albumData.follows} Follows
+                                </div>
                               </div>
                             </div>
                           </div>
+                          <div className={styles.titleText}>
+                            {albumData.title}
+                          </div>
                         </div>
-                        <div className={styles.titleText}>
-                          {albumData.title}
-                        </div>
-                      </div>
+                      </Tooltip>
                     </SwiperSlide>
                   </div>
                 ))}
