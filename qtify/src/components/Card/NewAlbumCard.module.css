@@ -121,3 +121,9 @@
   width: 1384px;
   margin-bottom: 20px;
 }
+.swiperSlide {
+  position: relative; /* Make sure the slide can contain the tooltip */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
