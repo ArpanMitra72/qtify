@@ -18,8 +18,8 @@ const Tooltip = ({ songCount, children }) => {
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      {children}
       {showTooltip && <div className={styles.tooltip}>{songCount} songs</div>}
+      {children}
     </div>
   );
 };

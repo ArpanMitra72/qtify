@@ -76,6 +76,7 @@ const Card = () => {
         ) : (
           <div>
             <Swiper
+              style={{ overflowY: "unset" }}
               spaceBetween={40}
               navigation={{
                 prevEl: ".customButtonPrev",
